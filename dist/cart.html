@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="css/cart.css">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="iconfont/iconfont.css">
+        
+        <title>【Y32】购物车</title>
+        <script type = "text/javascript" src="js/jquery-1.11.3.js"></script>
+        <script type = "text/javascript" src="js/jquery.cookie.js"></script>
+        <script type = 'text/javascript' src = 'js/parabola.js'></script>
+        <script src="js/cart.js"></script>
+        
+    </head>
+    <body>
+        <!-- header -->
+        <header>
+            <div class="head">
+                <div class="head_left">
+                    <ul class="clearfn">
+                        <li>
+                            <a href="http://localhost:8888/" class="kind">商城首页</a>
+                        </li>
+                        <li>
+                            <a class="inset kind" href="http://localhost/dist/login.html">登录</a>
+                            <i class="gap"></i>
+                            <a href="http://localhost/dist/register.html">注册</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="head_right">
+                    <ul>
+                        <li class="menu-label">
+                            <a href="/user/center/myhome.html" target="_blank">个人中心</a>
+                        </li>
+                        <li class="menu-label ul-li1">
+                            <span class="menu-span">合作渠道 <i class="iconfont">&#xe501;</i></span>
+                           
+                            <ul class="menu-ul" id="ul">
+                                <li>
+                                    <a href="//www.letv.com" target="_blank">电视官网</a>
+                                </li>
+                                <li>
+                                    <a href="/china_merchants.html" target="_blank">商家入驻</a> 
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-label ul-li2">
+                            <span class="menu-span">
+                                <a href="/helpself.html" target="_blank">帮助中心
+                                    <i class="iconfont">&#xe501;</i>
+                                </a>
+                            </span>
+                            <ul class="menu-ul" id="ul" >
+                                <li>
+                                    <a href="/help/help-id-163.html" target="_blank">配送安装</a>
+                                </li>
+                                <li>
+                                    <a href="/help/help-id-163.html" target="_blank">售后服务</a>
+                                </li>
+                                <li>
+                                    <a href="/help/help-id-163.html" target="_blank">运费标准</a>
+                                </li>
+                                <li>
+                                    <a href="/help/help-id-163.html" target="_blank">联系客服</a>
+                                </li>
+                            </ul> 
+                        </li>
+                        <li class="menu-label ul-li3">
+                            <span class="menu-span">
+                                <a href="/helpself.html" target="_blank">手机版
+                                    <i class="iconfont">&#xe501;</i>
+                                </a>
+                            </span>
+
+                            <ul class="menu-pic" id="head_pic">
+                                <li class="pic1"> <img src="images/1.jpg" alt="">
+                                    <span>扫码下载APP</span>
+                                </li>
+                                <li class="pic2"> <img src="images/2.jpg" alt="">
+                                    <span>扫码访问微商城</span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    <!-- main内容区 -->
+    <main>
+        <section>
+             <div class="main-img">
+                 <img src="images/lemall_logo.png" alt="">
+             </div>
+             <div class="search_wrap">
+                 <div class="clearfn">
+                     <input type="text" class="f-search-text" id="txt_company" style="color:#999">
+                     <button type="button" class="f-search-btn" id="search_submit" onclick="lemallGlobalLinkClick(2, 'W:1:0-2')"><i class="gap">搜</i><i class="gap">索</i></button>
+                 </div>
+                 <div class="L_popupmenu">
+                     <div class="box"></div>
+                 </div>
+                 <div id="search_hotkey" class="search_hotkey"></div>
+             </div>
+             <div class="main-shopping-cart qrcode-status">
+                 <a href="/cart.html" target="_blank" onclick="lemallGlobalLinkClick(2, 'W:2:0-2')">
+                     <i class="iconfont">&#xe507;</i>
+                     <span class="cart-product" style="display:none;">
+                         （<span class="product-count"></span>）件
+                     </span>
+                 </a>
+             </div>
+             <div class="app_download_wrap">
+                 <span class="close">x</span>
+                 <div class="qrcode_name">APP下载</div>
+                 <div class="qrcode_pic"><img src="images/1.jpg"></div>
+             </div>
+        </section>
+     </main>  
+       <!-- nav-main -->
+       <nav>
+           <section class="clearfn" id="nav-hover">
+            <article class="main-menu-name" id="main-menu-name">
+                <i class="iconfont">&#xe72e;</i>
+                <span class="menu-name">全部商品分类</span>
+            </article>
+            <aside>
+                <ul class="clearfix main-aisle">
+                    <li><a href="#">乐迷社区</a></li>
+                    <li><a href="#" target="_blank">大客户通道</a></li>
+                </ul>
+            </aside>
+            <ul class="clearfix main-service">
+                <li>
+                    <a href="#" target="_blank">
+                    <i class="iconfont">&#xe60b;</i>&nbsp;在线客服</a>
+                </li>
+            </ul>
+           </section>
+       </nav>
+<!-- maessage.推送 -->
+   <div class="message " id="message">
+            <article>
+                <ol id="mess-ul" class="mess-ul">
+                    <!-- <li id="mess-li"><a href="" id="mess-link"></a>
+                        <span></span>
+                        <i class="iconfont"></i>
+                    </li> -->
+                </ol>
+            </article>
+            <div id="mess-list" class="mess-list">
+                <ol id="mess-list-ul" class="mess-list-ul">
+                    
+                </ol>
+            </div>
+   </div>
+   <!-- content -->
+   <div class="content clearfn">
+       <div class="center">
+            <div class="crumb">
+                <a href="http://localhost:8888/" >首页</a>
+                <div id="mbx1"><span>&gt;</span>搜索全部结果<span>&gt;</span>漫威</div>
+            </div>
+            <div class="classify">
+                <span>分类</span>
+            </div>
+            <div class="matter">
+                <div class="mat-cent clearfn">
+                    <div class="mat-cent-left">
+                        <ul>
+                            <li><a class="frsit-a" ><span id="sortColor0" class="cur sortFontColor red">综合</span></a></li>
+                            <li><a  ><span id="sortColor1" class="sortFontColor">最新</span></a></li>
+                            <li> <a href="" class="s_price" ><span id="sortColor2" class="sortFontColor">价格</span></a></li>
+                            <li><a href="" class="s_comment" ><span id="sortColor3" class="sortFontColor">评论数</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="mat-cent-right">
+                        <span class="cur">为您搜索到<span id="totalProdSize" class="totalnum">29</span>个商品</span>
+                        <span id="pageing"><font>1</font>/1</span>
+                        <div class="right pagenation"><span class="current fonticon fonticon-aleft"></span><span class="current fonticon fonticon-aright"></span></div>
+                    </div>
+                    <div class="right pagenation">
+                        <span class="current fonticon fonticon-aleft">
+                            <i class="iconfont ">&#xe605;</i>
+                        </span>
+                        <span class="current fonticon fonticon-aright">
+                            <i class="iconfont">&#xe503;</i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+       </div>
+   </div>
+   <!-- show -->
+   <div class="show-mian">
+    <div class="goods_box">
+        <ul>
+            <!-- <li class = 'goods_item'>
+                    <div class = 'goods_pic'>
+                        <a href=""><img src="${arr[i].img}" alt=""></a>
+                    </div>
+                    <div class = 'goods_title clearfn'>
+                        <a>Y55C漫威版</a>
+                    </div>
+                    <div class="goods_price">
+                        <em>￥1990.00</em>
+                    </div>
+                    <div class="goods_icon">
+                        <p>
+                            <i class="iconfont" style="color: red;">&#xe504;</i>
+                            <i class="iconfont" style="color: red;">&#xe504;</i>
+                            <i class="iconfont" style="color: red;">&#xe504;</i>
+                            <i class="iconfont">&#xe504;</i>
+                            <i class="iconfont">&#xe504;</i>
+                        </p>
+                        <div class="evaluate">
+                            <a>3600条评价</a>
+                        </div>
+                    </div>
+                    <div class = 'sc'>
+                        <div class = 'sc_btn'>
+                            <a href="" id="${arr[i].id}" class="go">立即购买</a>
+                        </div>
+                    </div> 
+             </li> -->
+        </ul>
+    </div>
+</div>
+<!-- right -->
+<div class="sc_right">
+    <div class="sc_pic">
+        <!-- 购物车内商品的数量 -->
+        <div class="sc_num">
+            0
+        </div>
+    </div>
+    <form action="" style="font-size: 12px;color: gray;">
+        <input type="checkbox" onclick="" id="" ">全选
+    </form>
+    <button id = 'clearBtn' >清空购物车</button>
+    <ul class=" clearfn ">
+        <!-- <li id = "${newArr[i].id}">
+                <div>
+                    <input type="checkbox">
+                </div>
+                <div class = 'sc_goodsPic'>
+                    <img src="${newArr[i].img}" alt="">
+                </div>
+                <div class = 'sc_goodsTitle'>
+                    <div class="sc_goodsMain">
+                        <div class ="type">Y55C漫威版</div>
+                        <p>全网通 8GB+128GB 麒麟990 4000万超感光徕卡三摄（亮黑色）</p>
+                        <aside>
+                            <i class="iconfont" style="color: red;">&#xe504;</i>
+                            <i class="iconfont" style="color: red;">&#xe504;</i>
+                            <i class="iconfont" style="color: red;">&#xe504;</i>
+                            <i class="iconfont">&#xe504;</i>
+                            <i class="iconfont">&#xe504;</i>
+                        </aside>
+                        <em>￥1999.00</em>
+                    </div>
+                    
+                    <div class = 'sc_goodsNum'>
+                        <div class="sc_goodsAdd clearfn ">
+                            <button>+</button>
+                            <strong>1</strong>
+                            <button>-</button>
+                        </div>
+                        <div class="sc_goodsBtn clearfn ">
+                            <div class = 'delete_goodsBtn'>删除</div>
+                            <div class = 'sc_goodsBtn'>购买</div>
+                        </div>
+                        <span>商品数量：${newArr[i].num}</span>
+                    </div>
+                </div>
+            </li> -->
+    </ul>
+</div>
+<div id = 'ball' style="text-align: center;"></div>
+<!-- <div class=" clearfn "></div> -->
+  <!-- serve 服务 -->
+  <div class="clearfn serve">
+    <section>
+       <ul>
+           <li><i class="iconfont">&#xe6d1;</i> 正品保障</li>
+           <li><a href=""><i class="iconfont">&#xe639;</i> 7天无理由退货</a></li>
+           <li><a href=""><i class="iconfont">&#xe603;</i> 物流服务</a></li>
+           <li><a href=""><i class="iconfont">&#xe674;</i> 售后服务网点</a></li>
+       </ul> 
+    </section>
+</div>
+<!-- footer 底部 -->
+<footer>
+    <section>
+        <div class="foot-ul">
+            <h4>选购及了解</h4>
+            <ul>
+               <li><a href="">超级电视</a> </li>
+               <li><a href="">屏霸</a> </li>
+               <li><a href="">生活家</a> </li> 
+            </ul>
+        </div>
+        <div class="foot-ul">
+            <h4>帮助中心</h4>
+            <ul>
+                <li><a href="">新手入门</a> </li>
+                <li><a href="">物流服务</a> </li>
+                <li><a href="">售后政策</a> </li>
+                <li><a href="">安装保修</a> </li>
+            </ul>
+        </div>
+        <div class="foot-ul">
+            <h4>服务支持</h4>
+            <ul>
+                <li><a href="">自助服务</a> </li>
+                <li><a href="">乐码通道</a> </li>
+                <li><a href="">商家电话</a> </li>
+            </ul>
+        </div>
+        <div class="foot-ul">
+            <h4>关于乐融商城</h4>
+            <ul>
+                <li><a href="">公司介绍</a> </li>
+                <li><a href="">联系我们</a> </li>
+                <li><a href="">加入我们</a> </li>
+                <li><a href="">关注我们</a> </li>
+            </ul>
+        </div>
+        <div class="foot-ul" id="foot-tele">
+                <span>1010-9000</span>
+                <div class="foot-a">
+                    <a href="">在线客服</a>
+                </div>
+                <i class="line">热线服务时间：9:00-18:00</i>
+                <em class="line">在线服务时间：9:00-22:00</em>
+                <strong class="hint">*生活家频道商品服务</strong>
+                <b class="hint">需联系详情页商家电话</b>   
+        </div>
+    </section>
+    <article>
+        <aside>
+            Copyright © 2004-2019 乐视商城 All rights reserved
+            <span> | </span>
+            京ICP备19019019号-1
+            <span>|</span>
+            <a href="#">营业执照信息</a>
+        </aside>
+    </article>
+</footer>
+   </body>

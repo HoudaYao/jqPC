@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <title>登录</title>
+    <script src="js/ajax.js"></script>
+    <script>	
+        window.onload = function(){
+            var oBtn = document.getElementById("btn1");
+            var aInputs = document.getElementsByTagName("input");
+            var oAlert = document.getElementById("alert");
+            oBtn.onclick = function(){
+                $ajax({
+                    type: "post",
+                    url: "./php/login.php",
+                    data: {
+                        username: aInputs[0].value,
+                        password: aInputs[1].value,
+                    },
+                    success: function(result){
+                        // alert(result);
+                        //json格式字符串
+                        var obj = JSON.parse(result);
+                        if(obj.code){
+                            oAlert.className = 'alert alert-danger';
+                            
+                        }else{
+                            oAlert.className = 'alert alert-success';
+                        }
+
+                        oAlert.style.display = "block";
+                        oAlert.innerHTML = obj.message;
+                    },
+                    error: function(msg){
+                        alert(msg);
+                    }
+                })
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div class="login_box clearfn">
+            <a id="logo_url">
+                <img class="regi_logo" src="//i1.letvimg.com/lc02_user/202001/07/10/29/157836414332854.png">
+            </a>
+            <ul class="logo_ul">
+                <li class="logo_li_rlist">
+                    <span class="txt" id="txt">语言：
+                        <a class="language">简体中文</a>
+                    </span>
+                    <div class="lag_box" style="display: none;">
+                        <i class="coun_arrows coun_arrows_top"></i>
+                        <ul>
+                            <li langid="zh-cn" class="on">简体中文</li>
+                            <li langid="zh-hk">繁體中文</li>
+                            <li langid="en-us">English</li>
+                            <li langid="ru-ru" class="lastchild">Русский</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="logo_li_rlist wire">|</li>
+               
+                <li class="logo_li_rlist">
+                    <span class="txt">国家/地区：
+                        <a class="area">中国</a>
+                    </span>
+                </li>
+                <li class="logo_li_rlist wire">|</li>
+                <li class="logo_li_rlist help">
+                    <a href="http://www.le.com/help/index.html">帮助</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- main -->
+    <main>
+        <div class="main_box">
+            <div class="main_login">
+                <div class="main_login_from">
+                    <p class="tit_p clearfn">
+                        <span class="tit_span_left">登录</span>
+                        <b class="tit_right">
+                            <i class="iconfont">&#xe607;</i>
+                            <a href="http://localhost:8888/register.html" id="iphone">短信验证码登录</a>
+                        </b>
+                    </p>
+                    <p class="error_top"><span class="error" id="alert"></span></p>
+                    <form action="" class="from_box">
+                        <ul class="inp_ul">
+                            <li class="from_Li">
+                                <i class="iconfont user">&#xe626;</i>
+                                <input type="text" class="from_In1 loginname" name="username" placeholder="邮箱/手机号" value="">
+                                <i class="iconfont code">&#xe503;</i>
+                            </li>
+                            <li class="from_Li">
+                                <i class="iconfont user pwd" >&#xe625;</i>
+                                <input type="password" name="password" class="from_In1" value="" id="password" name="password" placeholder="密码">
+                            </li>
+                        </ul>
+                        <ul class="remember">
+                            <li class="rem_li">
+                                <label>
+                                    <input type="checkbox" tabindex="4" name="xieyi" id="xieyi" checked="checked" value="true">记住登录状态
+                                </label>
+                                <span class="f_fr">
+                                    <a class="pwd_reset blu bluHover" href="/user/backpwd?setDeliverCookie=http%3A%2F%2Fsso.lemall.com&amp;plat=shop_ml_pc&amp;next_action=http%3A%2F%2Fwww.lemall.com%2Findex.html">重置密码</a>
+                                </span>
+                            </li>
+                            
+                                
+                            
+                        </ul>
+                        <div class="from_btn">
+                            <a id="btn1" href="javascript:;" class="regi_btn">登&nbsp;&nbsp;&nbsp;&nbsp;录</a>
+                        </div>
+                    </form>
+                    <!-- register注册 -->
+                    <div class="register_box">
+                        <div class="register">
+                            从这里出发，开启生态世界 
+                            <a class="go-text" href="http://localhost/dist/register.html">立即注册</a>
+                        </div>
+                        <div class="login_way">
+                            <p class="login_way_line">
+                                <span class="login_text">其他方式登录</span>
+                            </p>
+                            <aside>
+                                <ul class="regi_more_list">
+                                    <li><a href="javascript:;" class="qq" title="QQ帐号登录"><i class="iconfont">&#xe62f;</i></a></li>
+                                    <li><a href="javascript:;" class="weixin" title="微信帐号登录"><i class="iconfont">&#xe636;</i></a></li>
+                                    <li><a href="javascript:;" class="weibo" title="新浪帐号登录" style="padding-top: 3px;"><i class="iconfont" id="weibo" >&#xe502;</i></a></li>
+                                    <li><a href="javascript:;" class="zhifubao" title="支付宝帐号登录"><i class="iconfont">&#xe509;</i></a></li>
+                                </ul>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,267 @@
+@charset "utf-8";
+* {
+  box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  background-color:#fff;}
+
+header {
+  width: 100%;
+  position: relative;
+  .login_box{
+      position: relative;
+      width: 1440px;
+      margin: 0 auto;
+      #logo_url{
+        color: #444;
+        height: 90px;
+        margin: auto;
+        float: left;
+        img{
+            margin: 30px 0 0 45px;
+            background-image: none;
+            height: 47px;
+            width: auto;
+            display: block;
+            float: left;
+        }
+      }
+      .logo_ul{
+        position: absolute;
+        top: 59px;
+        right: 45px;
+        font-size: 14px;
+        color: #a4a4a4;
+        float: right;
+        .help{
+            a{
+                color: #a4a4a4;
+            }
+        }
+        .logo_li_rlist{
+            float: left;
+            padding: 0 7px;
+            position: relative;
+            .txt{
+                font-weight: 400;
+                font-style: normal;
+                a{
+                    color: #a4a4a4;
+                    text-decoration: underline ;
+                }
+            }
+            .lag_box{
+                z-index: 3999;
+                top: 31px;
+                left: 8px;
+                width: 118px;
+                background: #fff;
+                border: 1px solid #DBDBDB;
+                // display: none;
+                position: absolute;
+                .coun_arrows_top {
+                    left: 63px;
+                    top: -9px;
+                    height: 15px;
+                    background-position: -41px -10px;
+                }
+                ul {
+                    padding: 10px;
+                    li{
+                        border-bottom: 1px solid #f0f0f0;
+                        text-align: center;
+                        height: 28px;
+                        line-height: 28px;
+                        width: 102px;
+                    }
+                    .on{
+                        background: #f0f0f0;
+                        color: #333;
+                    }
+                    .lastchild{
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+      }
+  }
+}
+// main
+main{
+    height: 483px;
+    background-image: url(//i1.letvimg.com/lc07_img/201607/29/15/13/operatbg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    input{
+        background-color: #fff;
+    }
+    .main_box{
+        width: 1440px;
+        margin: auto;
+        padding-top: 12px;
+        .main_login{
+            width: 430px;
+            height: 460px;
+            background: #fff;
+            float: right;
+            margin-right: 10px;
+            position: relative;
+            .main_login_from{
+                width: 380px;
+                margin: auto;
+                position: relative;
+                font-size: 14px;
+                color: #666;
+                .tit_p{
+                    width: 380px;
+                    margin-top: 23px;
+                    .tit_span_left{
+                        float: left;
+                        color: #333;
+                        font-size: 18px;
+                        font-weight: 400;
+                    }
+                    .tit_right{
+                        float: right;
+                        .iconfont{
+                            display: inline-block;
+                            margin-right: 3px;
+                            margin-top: 4px;
+                            width: 9px;
+                            height: 16px;
+                            color: #529bef;
+                        }
+                        a{
+                            font-size: 14px;
+                            display: inline-block;
+                            color: #529bef;
+                        }
+                    }
+                }
+                .error_top{
+                    width: 380px;
+                    height: 23px;
+                    margin: 0 auto;
+                    span{
+                        font-size: 12px;
+                        color: #d31723;
+                        display: block;
+                        line-height: 16px;
+                        background-position: 0 -100px;
+                    }
+                }
+                // input<正则>
+                .from_box{
+                    z-index: 2999;
+                    position: relative;
+                    ul{
+                        .Regi_li{
+                            display: block;
+                            position: relative;
+                            font-size: 14px;
+                            height: 42px;
+                            line-height: 30px;
+                            .iconfont{
+                                margin: 6px 6px 0 14px;
+                                display: inline-block;
+                                font-size: 20px;
+                            }
+                            .login_Inp{
+                                height: 23px;
+                                line-height: 24px;
+                                border: none;
+                                position: absolute;
+                                padding: 9px 0 10px;
+                                top: 10px;
+                                width: 270px;
+                                font-size: 14px;
+                                zoom: 1;
+                                padding-top: 12px;
+                            }
+                            .login_code{
+                                width: 205px;
+                            }
+                        }
+                        .Regi_li{
+                            margin-bottom: 15px;
+                            border: 1px solid #ccc;
+                            padding-bottom: 0;
+                            #getRegCode{
+                                padding: 1px;
+                                display: block;
+                                right: -1px;
+                                top: -1px;
+                                position: absolute;
+                                .getColor{
+                                    width: 105px;
+                                    height: 41px;
+                                   background-color: pink;
+                                }
+                            }
+                        }
+                        .Regi_ver{
+                            width: 228px;   
+                            float: left;
+                            input{
+                                border: none;
+                                height: 23px;
+                                line-height: 23px;
+                                color: #333;
+                                position: absolute;
+                                padding: 9px 0 10px;
+                                top: 10px;
+                                font-size: 14px;
+                                zoom: 1;
+                            }
+                        }
+                        .get_Ver_code{
+                            height: 40px;
+                            line-height: 40px;
+                            float: right;
+                            width: 134px;
+                            display: block;
+                            color: #419ce3;
+                            border: 1px solid #419ce3;
+                            text-align: center;
+                            font-size: 14px;
+                            overflow: hidden;
+                        }
+                    }
+                }
+                .Regi_gree{
+                    position: absolute;
+                    top: 222px;
+                    font-size: 12px;
+                    a{
+                        text-decoration: underline;
+                        font-size: 12px;
+                        color: #39c;
+                        display: inline-block;
+                    }
+                }
+                // 注册btn
+               .from_btn{
+                display: block;
+                position: absolute;
+                font-size: 14px;
+                top: 310px;
+                height: 42px;
+                line-height: 42px;
+                a{
+                    padding: 0px 170px;
+                    display: block;
+                    height: 38px;
+                    line-height: 38px;
+                    border: 2px solid #009de6;
+                    background: #009de6;
+                    color: #fff;
+                    font-size: 18px;
+                    text-align: center;
+                }
+               }
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+@charset "utf-8";
+html,body,p,div,h1,h2,h3,h4,h5,h6,ul,ol,li,img,input,textarea,fieldset,legend,select,dl,dt,dd,form{
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration:none;
+}
+img{
+	vertical-align:middle;
+	border:none;
+}
+body{
+	font-size:16px;
+}
+b,strong,i,em,h1,h2,h3,h4,h5,h6{
+	font-style:normal;
+	font-weight:normal;
+}
+fieldset{
+	border:none;
+}
+ul,ol{
+	list-style:none;
+}
+.clearfn:after{
+	content:"";
+	clear:both;
+	display:block;
+	height:0;
+	overflow:hidden;
+	visibility:hidden;
+}

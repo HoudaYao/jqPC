@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="css/index.min.css">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="iconfont/iconfont.css">
+        <title>乐视手机商城--首页</title>
+        <script src="js/index.js"></script>
+        <script src = 'js/require.js' async = 'true' defer data-main = 'js/main.js'></script>
+        <script>
+          
+        </script>
+    </head>
+    <body>
+<!-- header工具栏 -->
+        <header>
+            <div class="head">
+                <div class="head_left">
+                    <ul class="clearfn">
+                        <li>
+                            <a href="http://localhost:8888/" class="kind">商城首页</a>
+                        </li>
+                        <li>
+                            <a class="inset kind" href="http://localhost/dist/login.html">登录</a>
+                            <i class="gap"></i>
+                            <a href="http://localhost/dist/register.html">注册</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="head_right">
+                    <ul>
+                        <li class="menu-label">
+                            <a href="#" target="_blank">个人中心</a>
+                        </li>
+                        <li class="menu-label ul-li1">
+                            <span class="menu-span">合作渠道 <i class="iconfont">&#xe501;</i></span>
+                           
+                            <ul class="menu-ul" id="ul">
+                                <li>
+                                    <a href="http://localhost:8888/list.html" target="_blank">电视官网</a>
+                                </li>
+                                <li>
+                                    <a href="http://localhost:8888/list.html" target="_blank">商家入驻</a> 
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-label ul-li2">
+                            <span class="menu-span">
+                                <a href="/helpself.html" target="_blank">帮助中心
+                                    <i class="iconfont">&#xe501;</i>
+                                </a>
+                            </span>
+                            <ul class="menu-ul" id="ul" >
+                                <li>
+                                    <a href="/help/help-id-163.html" target="_blank">配送安装</a>
+                                </li>
+                                <li>
+                                    <a href="/help/help-id-163.html" target="_blank">售后服务</a>
+                                </li>
+                                <li>
+                                    <a href="/help/help-id-163.html" target="_blank">运费标准</a>
+                                </li>
+                                <li>
+                                    <a href="/help/help-id-163.html" target="_blank">联系客服</a>
+                                </li>
+                            </ul> 
+                        </li>
+                        <li class="menu-label ul-li3">
+                            <span class="menu-span">
+                                <a href="http://localhost:8888/list.html" target="_blank">手机版
+                                    <i class="iconfont">&#xe501;</i>
+                                </a>
+                            </span>
+
+                            <ul class="menu-pic" id="head_pic">
+                                <li class="pic1"> <img src="images/1.jpg" alt="">
+                                    <span>扫码下载APP</span>
+                                </li>
+                                <li class="pic2"> <img src="images/2.jpg" alt="">
+                                    <span>扫码访问微商城</span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+<!-- main内容区 -->
+        <main>
+           <section>
+                <div class="main-img">
+                    <img src="images/lemall_logo.png" alt="">
+                </div>
+                <div class="search_wrap">
+                    <div class="clearfn">
+                        <input type="text" class="f-search-text" id="txt_company" style="color:#999">
+                        <button type="button" class="f-search-btn" id="search_submit" onclick="lemallGlobalLinkClick(2, 'W:1:0-2')"><i class="gap">搜</i><i class="gap">索</i></button>
+                    </div>
+                    <div class="L_popupmenu">
+                        <div class="box"></div>
+                    </div>
+                    <div id="search_hotkey" class="search_hotkey"></div>
+                </div>
+                <div class="main-shopping-cart qrcode-status">
+                    <a href="/cart.html" target="_blank" onclick="lemallGlobalLinkClick(2, 'W:2:0-2')">
+                        <i class="iconfont">&#xe507;</i>
+                        <span class="cart-product" style="display:none;">
+                            （<span class="product-count"></span>）件
+                        </span>
+                    </a>
+                </div>
+                <div class="app_download_wrap">
+                    <span class="close">x</span>
+                    <div class="qrcode_name">APP下载</div>
+                    <div class="qrcode_pic"><img src="images/1.jpg"></div>
+                </div>
+           </section>
+        </main>
+
+
+<!-- maessage.推送 -->
+        <div class="message " id="message">
+            <ul class="mess-big" id="mess-big">
+               
+                <li><a href="" class="banner_link"><img src="http://img2-lemall.letvimg.com/le-cloud/s-pc/resource/img/2020-04-30/202004/1588231016684.jpg" alt=""></a></li>
+                <li><a href="" class="banner_link"><img src="http://img2-lemall.letvimg.com/le-cloud/s-pc/resource/img/2020-04-17/202004/1587113413696.jpg" alt=""></a> </li>
+                <li><a href="" class="banner_link"><img src="http://img2-lemall.letvimg.com/le-cloud/s-pc/resource/img/2020-04-17/202004/1587110789362.jpg" alt=""></a> </li>
+            </ul>
+            <ol class="mess-btn" id="mess-btn">
+                <li class="active"><a href="http://localhost:8888/list.html" id="a1" class="mess-btn-left"><i class="iconfont">&#xe605;</i></a></li>
+                <li><a href="" id="a2" class="mess-btn-right"><i class="iconfont">&#xe675;</i></a></li>
+                <span class="mess-cur" id="mess-cur"></span>
+            </ol>
+            <!-- <article >
+                <ol id="mess-ul">
+                    <!-- <li id="mess-li"><a href="" id="mess-link"></a>
+                        <span></span>
+                        <i class="iconfont"></i>
+                    </li> -->
+                     
+                </ol>
+                <div id="mess-list" class="mess-list">
+                    <ol id="mess-list-ul" class="mess-list-ul">
+                        <li class="mess-list-li">
+                            <a href="" class="list-li-a" id ="#?id=${i}">
+                                <div class="list-li-pic">
+                                    <img src="images/Y32.jpg" alt="" id="image">
+                                </div>
+                                <div class="introduce">
+                                    <b id="mode">Y32</b><em class="price">￥129</em>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mess-list-li">
+                            <a href="" class="list-li-a" id ="#?id=${i}">
+                                <div class="list-li-pic">
+                                    <img src="images/tv2.jpg" alt="" id="image">
+                                </div>
+                                <div class="introduce">
+                                    <b id="mode">tv2</b><em class="price">￥129</em>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mess-list-li">
+                            <a href="" class="list-li-a" id ="#?id=${i}">
+                                <div class="list-li-pic">
+                                    <img src="images/tv3.jpg" alt="" id="image">
+                                </div>
+                                <div class="introduce">
+                                    <b id="mode">tv3</b><em class="price">￥129</em>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mess-list-li">
+                            <a href="" class="list-li-a" id ="#?id=${i}">
+                                <div class="list-li-pic">
+                                    <img src="images/tv4.jpg" alt="" id="image">
+                                </div>
+                                <div class="introduce">
+                                    <b id="mode">tv4</b><em class="price">￥129</em>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mess-list-li">
+                            <a href="" class="list-li-a" id ="#?id=${i}">
+                                <div class="list-li-pic">
+                                    <img src="images/tv5.jpg" alt="" id="image">
+                                </div>
+                                <div class="introduce">
+                                    <b id="mode">tv5</b><em class="price">￥129</em>
+                                </div>
+                            </a>
+                        </li><li class="mess-list-li">
+                            <a href="" class="list-li-a" id ="#?id=${i}">
+                                <div class="list-li-pic">
+                                    <img src="images/tv6.jpg" alt="" id="image">
+                                </div>
+                                <div class="introduce">
+                                    <b id="mode">tv6</b><em class="price">￥129</em>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mess-list-li">
+                            <a href="" class="list-li-a" id ="#?id=${i}">
+                                <div class="list-li-pic">
+                                    <img src="images/tv7.jpg" alt="" id="image">
+                                </div>
+                                <div class="introduce">
+                                    <b id="mode">tv7</b><em class="price">￥129</em>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mess-list-li">
+                            <a href="" class="list-li-a" id ="#?id=${i}">
+                                <div class="list-li-pic">
+                                    <img src="images/X55L.jpg" alt="" id="image">
+                                </div>
+                                <div class="introduce">
+                                    <b id="mode">X55L</b><em class="price">￥129</em>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="mess-list-li">
+                            <a href="" class="list-li-a" id ="#?id=${i}">
+                                <div class="list-li-pic">
+                                    <img src="images/X55N.jpg" alt="" id="image">
+                                </div>
+                                <div class="introduce">
+                                    <b id="mode">X55N</b><em class="price">￥129</em>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mess-list-li">
+                            <a href="" class="list-li-a" id ="#?id=${i}">
+                                <div class="list-li-pic">
+                                    <img src="images/X65S.jpg" alt="" id="image">
+                                </div>
+                                <div class="introduce">
+                                    <b id="mode">X65S</b><em class="price">￥129</em>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mess-list-li">
+                            <a href="" class="list-li-a" id ="#?id=${i}">
+                                <div class="list-li-pic">
+                                    <img src="images/Y55C.jpg" alt="" id="image">
+                                </div>
+                                <div class="introduce">
+                                    <b id="mode">Y55C</b><em class="price">￥129</em>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="mess-list-li">
+                            <a href="" class="list-li-a" id ="#?id=${i}">
+                                <div class="list-li-pic">
+                                    <img src="images/Y55S.jpg" alt="" id="image">
+                                </div>
+                                <div class="introduce">
+                                    <b id="mode">Y55S</b><em class="price">￥129</em>
+                                </div>
+                            </a>
+                        </li><li class="mess-list-li">
+                            <a href="" class="list-li-a" id ="#?id=${i}">
+                                <div class="list-li-pic">
+                                    <img src="images/Y65.jpg" alt="" id="image">
+                                </div>
+                                <div class="introduce">
+                                    <b id="mode">Y65</b><em class="price">￥129</em>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mess-list-li">
+                            <a href="" class="list-li-a" id ="#?id=${i}">
+                                <div class="list-li-pic">
+                                    <img src="images/Y65S.jpg" alt="" id="image">
+                                </div>
+                                <div class="introduce">
+                                    <b id="mode">Y65S</b><em class="price">￥129</em>
+                                </div>
+                            </a>
+                        </li>
+                        
+                    </ol>
+                </div>
+            </article> -->
+            <aside>
+                <div class="user-img">
+                    <img src="images/user1.jpg" alt="">
+                </div>
+                <span class="hi">Hi, 您好</span>
+                <p>欢迎来到乐视商城</p>
+                <div class="users-btn">
+                    <a href="http://localhost/dist/login.html" id="login" style="color: #fff;
+                    background-color: #2884c7;" >登录</a>
+                    <a href="http://localhost/dist/register.html" id="register" style="color: #333;
+                    background-color: #e6e6e6;">注册</a>
+                </div>
+                <div class="news-box">
+                    <div class="clearfix news-header">
+                        <strong class="news-title">商城资讯</strong>
+                        <span class="more"><a href="http://localhost:8888/list.html" target="_blank">更多&gt;</a></span>
+                    </div>
+                        <ul class="news-list">
+                                <li><a href="#" target="_blank">【资讯】挂架适配机型明细</a></li>
+                                <li><a href="#" target="_blank">【声明】防诈骗声明</a></li>
+                                <li><a href="#" target="_blank">【头条】老将新生？！</a></li>
+                        </ul>
+                </div>
+            </aside>
+        </div>
+
+
+
+
+
+<!-- show 展示 -->
+<!-- 广告展示1 -->
+        <div class="show1">
+            <section>
+                <div class="clearfn aisle-banner-container">
+                    <div class="aisle-wrap">
+                        <a href="http://localhost:8888/list.html" id="skip">
+                            <img src="images/p1.jpg">
+                        </a>
+                    </div>
+                        <ul class="clearfn banner-wrap">
+                                <li>
+                                    <a href="http://localhost:8888/list.html" target="_blank">
+                                        <img src="images/p2.jpg" alt="超5系列（通道图）">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://localhost:8888/list.html" target="_blank">
+                                        <img src="images/p3.jpg" alt="Y系列（通道图）">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://localhost:8888/list.html" target="_blank">
+                                        <img src="images/p4.jpg" alt="zero系列">
+                                     </a>
+                                </li>
+                                <li>
+                                    <a href="http://localhost:8888/list.html" target="_blank">
+                                        <img src="images/p5.jpg" alt="x系列">
+                                    </a>
+                                </li>
+                        </ul>
+                </div>
+            </section>
+        </div>
+<!--  show2-->
+<!-- 超级电视 -->
+    <!-- 一区 -->
+        <div class="show2">
+            <section>
+                <div class="clearfix area-header-wrap">
+                    <div class="clearfix area-title">
+                        <strong class="title">超级电视</strong>
+                        <i class="gap"></i>
+                        <span class="desc">运营家庭美好生活</span>
+                    </div>
+                    <ul class="clearfix area-type-select">
+                        <li><a href="http://localhost:8888/list.html" target="_blank">40吋</a></li>
+                        <li class="gap"></li>
+                        <li><a href="http://localhost:8888/list.html" target="_blank">50吋</a></li>
+                        <li class="gap"></li>
+                        <li><a href="http://localhost:8888/list.html" target="_blank">55吋</a></li>
+                        <li class="gap"></li>
+                        <li><a href="http://localhost:8888/list.html" target="_blank">65吋</a></li>
+                        <li class="gap"></li>
+                        <li><a href="http://localhost:8888/list.html" target="_blank">更多选择 »</a></li>
+                    </ul>
+                </div>
+            </section>
+            <!-- 二区 -->
+            <aside>
+                <ul>
+                    <li class="clearfn " id="frist-img"><a href=""><img src="images/tv1.jpg" alt=""></a></li>
+                    <li id="show2-aside-li">
+                        <div class="aside-span">
+                            <span style="background-color: #3ece17">新品</span><span style="background-color: #f2a705;">热卖</span>
+                        </div>
+                        <div class="aside-pic">
+                            <img src="images/tv2.jpg" alt="">
+                        </div>
+                        <strong>Y32底座版</strong>
+                        <p>1GB+8GB大存储|全网海量资源|真人工智能系统</p>
+                        <div class="aside-price">
+                            <i>￥899</i><em>￥999</em>
+                        </div>
+                        <div class="aside-btn" id="aside-btn">
+                            <a href="" class="show-btn" style="background-color: #2884c7;">了解产品</a>
+                            <a href="" class="show-btn" style="background-color: #ed1c24;">立即购买</a>
+                        </div>
+                    </li>
+                    <li id="show2-aside-li1">
+                        <div class="aside-span">
+                            <span style="background-color: #ed1c24;">新品</span><span style="background-color: #2884c7;">直降七百</span>
+                        </div>
+                        <div class="aside-pic">
+                            <img src="images/tv3.jpg" alt="">
+                        </div>
+                        <strong>超5 X50底座版</strong>
+                        <p>金属超薄机身丨2GB+16GB大存储</p>
+                        <div class="aside-price">
+                            <i>￥3299</i><em>￥3999</em>
+                        </div>
+                        <div class="aside-btn" id="aside-btn1">
+                            <a href="" class="show-btn" style="background-color: #2884c7;">了解产品</a>
+                            <a href="" class="show-btn" style="background-color: #ed1c24;">立即购买</a>
+                        </div>
+                    </li>
+                    <li id="show2-aside-li2">
+                        <div class="aside-span">
+                            <span style="background-color: #ed1c24;">以旧换新</span><span style="background-color:#2884c7">直降五百</span>
+                        </div>
+                        <div class="aside-pic">
+                            <img src="images/tv3.jpg" alt="">
+                        </div>
+                        <strong>X55L底座版</strong>
+                        <p>Mstar四核处理器 | 4K HDR超高清</p>
+                        <div class="aside-price">
+                            <i>￥2899</i><em>￥3399</em>
+                        </div>
+                        <div class="aside-btn" id="aside-btn2">
+                            <a href="" class="show-btn" style="background-color: #2884c7;">了解产品</a>
+                            <a href="" class="show-btn" style="background-color: #ed1c24;">立即购买</a>
+                        </div>
+                    </li>
+                    <li id="show2-aside-li3">
+                        <div class="aside-span">
+                            <span style="background-color: #ed1c24;">爆款</span><span style="background-color:#2884c7">直降1000</span>
+                        </div>
+                        <div class="aside-pic">
+                            <img src="images/tv4.jpg" alt="">
+                        </div>
+                        <strong>X40C底座版</strong>
+                        <p>超清降噪引擎丨BT709 100%色域覆盖</p>
+                        <div class="aside-price">
+                            <i>￥1299</i><em>￥2299</em>
+                        </div>
+                        <div class="aside-btn" id="aside-btn3">
+                            <a href="" class="show-btn" style="background-color: #2884c7;">了解产品</a>
+                            <a href="" class="show-btn" style="background-color: #ed1c24;">立即购买</a>
+                        </div>
+                    </li>
+                    <li id="show2-aside-li4">
+                        <div class="aside-span">
+                            <span style="background-color: #ed1c24;">以旧换新</span><span style="background-color:#f2a705">爆款</span>
+                        </div>
+                        <div class="aside-pic">
+                            <img src="images/tv5.jpg" alt="">
+                        </div>
+                        <strong>X50 Pro底座版</strong>
+                        <p>Mstar 4核处理器  | 16GB闪存</p>
+                        <div class="aside-price">
+                            <i>￥2199</i><em>￥2599</em>
+                        </div>
+                        <div class="aside-btn" id="aside-btn4">
+                            <a href="" class="show-btn" style="background-color: #2884c7;">了解产品</a>
+                            <a href="" class="show-btn" style="background-color: #ed1c24;">立即购买</a>
+                        </div>
+                    </li>
+                    <li id="show2-aside-li5">
+                        <div class="aside-span">
+                            <span style="background-color:#f2a705">热卖</span><span style="background-color:#2884c7">直降500</span>
+                        </div>
+                        <div class="aside-pic">
+                            <img src="images/tv6.jpg" alt="">
+                        </div>
+                        <strong>Zero65漫威版</strong>
+                        <p>专属定制漫威元素|3GB+16GB大存储</p>
+                        <div class="aside-price">
+                            <i>￥7499</i><em>￥7999</em>
+                        </div>
+                        <div class="aside-btn" id="aside-btn5">
+                            <a href="" class="show-btn" style="background-color: #2884c7;">了解产品</a>
+                            <a href="" class="show-btn" style="background-color: #ed1c24;">立即购买</a>
+                        </div>
+                    </li>
+                </ul>
+            </aside>
+            </div>
+        </div>
+    <!-- show3 精选配件 -->
+    <div class="show3">
+        <section>
+            <div class="clearfix area-header-wrap">
+                <div class="clearfix area-title">
+                    <strong class="title">精选配件</strong>
+                    <i class="gap"></i>
+                    <span class="desc">让美好生活更多彩</span>
+                </div>
+                <ul class="clearfix area-type-select">
+                    <li><a href="#" target="_blank">游戏娱乐</a></li>
+                    <li class="gap"></li>
+                    <li><a href="#" target="_blank">底座</a></li>
+                    <li class="gap"></li>
+                    <li><a href="#" target="_blank">挂架</a></li>
+                    <li class="gap"></li>
+                    <li><a href="#" target="_blank">屏霸</a></li>
+                    <li class="gap"></li>
+                    <li><a href="#" target="_blank">更多选择 »</a></li>
+                </ul>
+            </div>
+        </section>
+        <article>
+            <div class="art-bigpic">
+                <a href="#" target="_blank">
+                    <img src="images/j1.jpg">
+                </a>
+            </div>
+            <ul>
+                
+                <li id="show3-li1">
+                    <div class="art-pic">
+                        <img src="images/e1.jpg" alt="">
+                    </div>
+                    <strong>云豹底座 YUNB43A</strong>
+                    <p>适配超5系列 | 全能云豹底座</p>
+                    <div class="art-price">
+                        <i>￥129</i>
+                    </div>
+                    <div class="art-btn" id="art-btn1">
+                        <a href="" class="art-a" style="background-color: #ed1c24;">立即购买</a>
+                    </div>
+                    
+                </li>
+                <li id="show3-li2">
+                    <div class="clearfn art-pic">
+                        <img src="images/e2.jpg" alt="">
+                    </div>
+                    <strong>固定挂架 LS065NN1</strong>
+                    <p>圆弧形边角设计 | 安全螺钉设计</p>
+                    <div class="art-price">
+                        <i>￥199</i>
+                    </div>
+                    <div class="art-btn" id="art-btn2">
+                        <a href="" class="show-btn" style="background-color: #ed1c24;">立即购买</a>
+                    </div>
+                </li>
+                <li id="show3-li3">
+                    <div class="art-pic">
+                        <img src="images/e1.jpg" alt="">
+                    </div>
+                    <strong>云豹底座 YUNB50A</strong>
+                    <p>适配超5系列 | 全能云豹底座</p>
+                    <div class="art-price">
+                        <i>￥139</i>
+                    </div>
+                    <div class="art-btn" id="art-btn3">
+                        <a href="" class="show-btn" style="background-color: #ed1c24;">立即购买</a>
+                    </div>
+                </li>
+                <!-- 4 -->
+                <li id="show3-li4">
+                    <div class="art-pic">
+                        <img src="images/e3.jpg" alt="">
+                    </div>
+                    <strong>固定挂架LS698SF</strong>
+                    <p>最大承重30kg | 超薄设计</p>
+                    <div class="art-price">
+                        <i>￥196</i>
+                    </div>
+                    <div class="art-btn" id="art-btn4">
+                        <a href="" class="show-btn" style="background-color: #ed1c24;">立即购买</a>
+                    </div>
+                </li>
+                <li id="show3-li5">
+                    <div class="art-pic">
+                        <img src="images/e1.jpg" alt="">
+                    </div>
+                    <strong>云瞳底座 YUNT55A</strong>
+                    <p>适配超5系列 | 新一代云瞳底座</p>
+                    <div class="art-price">
+                        <i>￥296</i>
+                    </div>
+                    <div class="art-btn" id="art-btn5">
+                        <a href="" class="show-btn" style="background-color: #ed1c24;">立即购买</a>
+                    </div>
+                </li>
+                <li id="show3-li6">
+                    <div class="art-pic">
+                        <img src="images/e4.jpg" alt="">
+                    </div>
+                    <strong>固定挂架LS698SFP</strong>
+                    <p>最大承重30KG | 超薄设计</p>
+                    <div class="art-price">
+                        <i>￥49</i>
+                    </div>
+                    <div class="art-btn" id="art-btn6">
+                        <a href="" class="show-btn" style="background-color: #ed1c24;">立即购买</a>
+                    </div>
+                </li>
+                <li id="show3-li7">
+                    <div class="art-pic">
+                        <img src="images/e2.jpg" alt="">
+                    </div>
+                    <strong>固定挂架 LS065NN2</strong>
+                    <p>承重40KG | 安全螺钉设计</p>
+                    <div class="art-price">
+                        <i>￥199</i>
+                    </div>
+                    <div class="art-btn" id="art-btn7">
+                        <a href="" class="show-btn" style="background-color: #ed1c24;">立即购买</a>
+                    </div>
+                </li>
+                <li id="show3-li8">
+                    <div class="art-pic">
+                        <img src="images/e5.jpg" alt="">
+                    </div>
+                    <strong>X65/X65S 云底座</strong>
+                    <p>一体成型技术 | 如意造型设计</p>
+                    <div class="art-price">
+                        <i>￥499</i>
+                    </div>
+                    <div class="art-btn" id="art-btn8">
+                        <a href="" class="show-btn" style="background-color: #ed1c24;">立即购买</a>
+                    </div>
+                </li>
+            </ul>
+        </article>   
+    </div>
+    <!-- serve 服务 -->
+    <div class="clearfn serve">
+        <section>
+           <ul>
+               <li><i class="iconfont">&#xe6d1;</i> 正品保障</li>
+               <li><a href=""><i class="iconfont">&#xe639;</i> 7天无理由退货</a></li>
+               <li><a href=""><i class="iconfont">&#xe603;</i> 物流服务</a></li>
+               <li><a href=""><i class="iconfont">&#xe674;</i> 售后服务网点</a></li>
+           </ul> 
+        </section>
+    </div>
+    <!-- footer 底部 -->
+    <footer>
+        <section>
+            <div class="foot-ul">
+                <h4>选购及了解</h4>
+                <ul>
+                   <li><a href="">超级电视</a> </li>
+                   <li><a href="">屏霸</a> </li>
+                   <li><a href="">生活家</a> </li> 
+                </ul>
+            </div>
+            <div class="foot-ul">
+                <h4>帮助中心</h4>
+                <ul>
+                    <li><a href="">新手入门</a> </li>
+                    <li><a href="">物流服务</a> </li>
+                    <li><a href="">售后政策</a> </li>
+                    <li><a href="">安装保修</a> </li>
+                </ul>
+            </div>
+            <div class="foot-ul">
+                <h4>服务支持</h4>
+                <ul>
+                    <li><a href="">自助服务</a> </li>
+                    <li><a href="">乐码通道</a> </li>
+                    <li><a href="">商家电话</a> </li>
+                </ul>
+            </div>
+            <div class="foot-ul">
+                <h4>关于乐融商城</h4>
+                <ul>
+                    <li><a href="">公司介绍</a> </li>
+                    <li><a href="">联系我们</a> </li>
+                    <li><a href="">加入我们</a> </li>
+                    <li><a href="">关注我们</a> </li>
+                </ul>
+            </div>
+            <div class="foot-ul" id="foot-tele">
+                    <span>1010-9000</span>
+                    <div class="foot-a">
+                        <a href="">在线客服</a>
+                    </div>
+                    <i class="line">热线服务时间：9:00-18:00</i>
+                    <em class="line">在线服务时间：9:00-22:00</em>
+                    <strong class="hint">*生活家频道商品服务</strong>
+                    <b class="hint">需联系详情页商家电话</b>   
+            </div>
+        </section>
+        <article>
+            <aside>
+                Copyright © 2004-2019 乐视商城 All rights reserved
+                <span> | </span>
+                京ICP备19019019号-1
+                <span>|</span>
+                <a href="#">营业执照信息</a>
+            </aside>
+        </article>
+    </footer>
+    <!-- float -->
+    <div class="float">
+        <section>
+            <a href="http://localhost:8888/cart.html"><i class="iconfont">&#xe507;</i></a>
+           <b></b>
+            <div class="float-shop">
+                <i class="iconfont">&#xe506;</i>
+                <span>购物车</span>
+            </div>
+        </section>
+        <article>
+            <a href="" class="float-art-a"><i class="iconfont">&#xe622;</i></a>
+            <b></b>
+            <div class="float-link">
+                <i class="iconfont link-i">&#xe506;</i>
+                <div class="link-a">
+                    <a href=""><i class="iconfont">&#xe62f;</i></a>
+                    <a href=""><i class="iconfont">&#xe636;</i></a>
+                    <a href=""><i class="iconfont">&#xe602;</i></a>
+                    <a href=""><i class="iconfont">&#xe502;</i></a>
+                </div>
+                
+            </div>
+        </article>
+        <aside>
+            <a href=""><i class="iconfont">&#xe60b;</i></a>
+            <div class="float-show">
+                <i class="iconfont">&#xe506;</i>
+                <strong>在线客服</strong>
+            </div>
+        </aside>
+        <footer>
+            <a href="">
+                <i class="iconfont">&#xe91b;</i>
+            </a>
+        </footer>
+    </div>
+
+    </body>
+</html>

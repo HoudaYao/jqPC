@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="css/list.css">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="iconfont/iconfont.css">
+        <title>详情页</title>
+        <script src="js/list.js"></script>
+        <script src = 'js/require.js' async = 'true' defer data-main = 'js/main2.js'></script>
+        <script>
+            window.onload=function(){
+                var oBtn = document.getElementById("buy-btn");
+                oBtn.onclick = function(){
+                    window.open('buy.html');
+                }
+            }
+            
+        </script>
+    </head>
+    <body>
+        <!-- header -->
+        <header>
+            <div class="head">
+                <div class="head_left">
+                    <ul class="clearfn">
+                        <li>
+                            <a href="http://localhost:8888/" class="kind">商城首页</a>
+                        </li>
+                        <li>
+                            <a class="inset kind" href="http://localhost/dist/login.html">登录</a>
+                            <i class="gap"></i>
+                            <a href="http://localhost/dist/register.html">注册</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="head_right">
+                    <ul>
+                        <li class="menu-label">
+                            <a href="/user/center/myhome.html" target="_blank">个人中心</a>
+                        </li>
+                        <li class="menu-label ul-li1">
+                            <span class="menu-span">合作渠道 <i class="iconfont">&#xe501;</i></span>
+                           
+                            <ul class="menu-ul" id="ul">
+                                <li>
+                                    <a href="//www.letv.com" target="_blank">电视官网</a>
+                                </li>
+                                <li>
+                                    <a href="/china_merchants.html" target="_blank">商家入驻</a> 
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-label ul-li2">
+                            <span class="menu-span">
+                                <a href="/helpself.html" target="_blank">帮助中心
+                                    <i class="iconfont">&#xe501;</i>
+                                </a>
+                            </span>
+                            <ul class="menu-ul" id="ul" >
+                                <li>
+                                    <a href="/help/help-id-163.html" target="_blank">配送安装</a>
+                                </li>
+                                <li>
+                                    <a href="/help/help-id-163.html" target="_blank">售后服务</a>
+                                </li>
+                                <li>
+                                    <a href="/help/help-id-163.html" target="_blank">运费标准</a>
+                                </li>
+                                <li>
+                                    <a href="/help/help-id-163.html" target="_blank">联系客服</a>
+                                </li>
+                            </ul> 
+                        </li>
+                        <li class="menu-label ul-li3">
+                            <span class="menu-span">
+                                <a href="/helpself.html" target="_blank">手机版
+                                    <i class="iconfont">&#xe501;</i>
+                                </a>
+                            </span>
+
+                            <ul class="menu-pic" id="head_pic">
+                                <li class="pic1"> <img src="images/1.jpg" alt="">
+                                    <span>扫码下载APP</span>
+                                </li>
+                                <li class="pic2"> <img src="images/2.jpg" alt="">
+                                    <span>扫码访问微商城</span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    <!-- main内容区 -->
+    <main>
+        <section>
+             <div class="main-img">
+                 <img src="images/lemall_logo.png" alt="">
+             </div>
+             <div class="search_wrap">
+                 <div class="clearfn">
+                     <input type="text" class="f-search-text" id="txt_company" style="color:#999">
+                     <button type="button" class="f-search-btn" id="search_submit" onclick="lemallGlobalLinkClick(2, 'W:1:0-2')"><i class="gap">搜</i><i class="gap">索</i></button>
+                 </div>
+                 <div class="L_popupmenu">
+                     <div class="box"></div>
+                 </div>
+                 <div id="search_hotkey" class="search_hotkey"></div>
+             </div>
+             <div class="main-shopping-cart qrcode-status">
+                 <a href="/cart.html" target="_blank" onclick="lemallGlobalLinkClick(2, 'W:2:0-2')">
+                     <i class="iconfont">&#xe507;</i>
+                     <span class="cart-product" style="display:none;">
+                         （<span class="product-count"></span>）件
+                     </span>
+                 </a>
+             </div>
+             <div class="app_download_wrap">
+                 <span class="close">x</span>
+                 <div class="qrcode_name">APP下载</div>
+                 <div class="qrcode_pic"><img src="images/1.jpg"></div>
+             </div>
+        </section>
+     </main>  
+       <!-- nav-main -->
+       <nav>
+           <section class="clearfn" id="nav-hover">
+                <article class="main-menu-name" id="main-menu-name">
+                    <i class="iconfont">&#xe72e;</i>
+                    <span class="menu-name">全部商品分类</span>
+                </article>
+                <aside>
+                    <ul class="clearfix main-aisle">
+                        <li><a href="#">乐迷社区</a></li>
+                        <li><a href="#" target="_blank">大客户通道</a></li>
+                    </ul>
+                </aside>
+                <ul class="clearfix main-service">
+                    <li>
+                        <a href="#" target="_blank">
+                        <i class="iconfont">&#xe60b;</i>&nbsp;在线客服</a>
+                    </li>
+                </ul>
+           </section>
+       </nav>
+<!-- maessage.推送 -->
+   <div class="message " id="message">
+        <article >
+            <ol id="mess-ul">
+                <!-- <li id="mess-li"><a href="" id="mess-link"></a>
+                    <span></span>
+                    <i class="iconfont"></i>
+                </li> -->
+                
+            </ol>
+            <div id="mess-list" class="mess-list">
+                <ol id="mess-list-ul" class="mess-list-ul">
+                    <li class="mess-list-li">
+                        <a href="" class="list-li-a" id ="#?id=${i}">
+                            <div class="list-li-pic">
+                                <img src="images/Y32.jpg" alt="" id="image">
+                            </div>
+                            <div class="introduce">
+                                <b id="mode">Y32</b><em class="price">￥129</em>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="mess-list-li">
+                        <a href="" class="list-li-a" id ="#?id=${i}">
+                            <div class="list-li-pic">
+                                <img src="images/tv2.jpg" alt="" id="image">
+                            </div>
+                            <div class="introduce">
+                                <b id="mode">tv2</b><em class="price">￥129</em>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="mess-list-li">
+                        <a href="" class="list-li-a" id ="#?id=${i}">
+                            <div class="list-li-pic">
+                                <img src="images/tv3.jpg" alt="" id="image">
+                            </div>
+                            <div class="introduce">
+                                <b id="mode">tv3</b><em class="price">￥129</em>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="mess-list-li">
+                        <a href="" class="list-li-a" id ="#?id=${i}">
+                            <div class="list-li-pic">
+                                <img src="images/tv4.jpg" alt="" id="image">
+                            </div>
+                            <div class="introduce">
+                                <b id="mode">tv4</b><em class="price">￥129</em>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="mess-list-li">
+                        <a href="" class="list-li-a" id ="#?id=${i}">
+                            <div class="list-li-pic">
+                                <img src="images/tv5.jpg" alt="" id="image">
+                            </div>
+                            <div class="introduce">
+                                <b id="mode">tv5</b><em class="price">￥129</em>
+                            </div>
+                        </a>
+                    </li><li class="mess-list-li">
+                        <a href="" class="list-li-a" id ="#?id=${i}">
+                            <div class="list-li-pic">
+                                <img src="images/tv6.jpg" alt="" id="image">
+                            </div>
+                            <div class="introduce">
+                                <b id="mode">tv6</b><em class="price">￥129</em>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="mess-list-li">
+                        <a href="" class="list-li-a" id ="#?id=${i}">
+                            <div class="list-li-pic">
+                                <img src="images/tv7.jpg" alt="" id="image">
+                            </div>
+                            <div class="introduce">
+                                <b id="mode">tv7</b><em class="price">￥129</em>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="mess-list-li">
+                        <a href="" class="list-li-a" id ="#?id=${i}">
+                            <div class="list-li-pic">
+                                <img src="images/X55L.jpg" alt="" id="image">
+                            </div>
+                            <div class="introduce">
+                                <b id="mode">X55L</b><em class="price">￥129</em>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="mess-list-li">
+                        <a href="" class="list-li-a" id ="#?id=${i}">
+                            <div class="list-li-pic">
+                                <img src="images/X55N.jpg" alt="" id="image">
+                            </div>
+                            <div class="introduce">
+                                <b id="mode">X55N</b><em class="price">￥129</em>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="mess-list-li">
+                        <a href="" class="list-li-a" id ="#?id=${i}">
+                            <div class="list-li-pic">
+                                <img src="images/X65S.jpg" alt="" id="image">
+                            </div>
+                            <div class="introduce">
+                                <b id="mode">X65S</b><em class="price">￥129</em>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="mess-list-li">
+                        <a href="" class="list-li-a" id ="#?id=${i}">
+                            <div class="list-li-pic">
+                                <img src="images/Y55C.jpg" alt="" id="image">
+                            </div>
+                            <div class="introduce">
+                                <b id="mode">Y55C</b><em class="price">￥129</em>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="mess-list-li">
+                        <a href="" class="list-li-a" id ="#?id=${i}">
+                            <div class="list-li-pic">
+                                <img src="images/Y55S.jpg" alt="" id="image">
+                            </div>
+                            <div class="introduce">
+                                <b id="mode">Y55S</b><em class="price">￥129</em>
+                            </div>
+                        </a>
+                
+                    
+                </ol>
+            </div>
+        </article>
+        <div id="mess-list" class="mess-list">
+            <ol id="mess-list-ul" class="mess-list-ul">
+                        
+            </ol>
+         </div>
+   </div>
+<!-- titie 标题 -->
+<div class="titlebox">
+    <div class="title clearfn">
+        <section class="letv">
+            <a href="#">Letv超级电视 Y32</a>
+        </section>
+        <article class="online">
+            <a href="">
+                <i class="iconfont">&#xe51f;</i>
+                <span>在线咨询</span>
+            </a>
+        </article>
+        <div class="buy-btn" id="buy-btn">
+            <a>立即购买</a>
+        </div>
+        <aside class="title-node clearfn">
+            <ul>
+                <li><a href="" class="overview">概述</a></li>
+                <span> | </span>
+                <li><a href="">参数</a></li>
+            </ul>
+        </aside>
+    </div>
+</div>
+<!-- show -->
+<div class="Y32-show">
+    <div class="show01 number">
+        <div class="center">
+            <p class="tit">Letv 超级电视 Y32</p>
+            <p class="desc">好货又不贵，就是这 “Young”</p>
+            <p class="price-small"><span>原价：¥</span>999</p>
+            <p class="price"><span>活动价：¥</span>899</p>
+            <p class="remark">*此电视含开机广告</p>
+        </div>
+    </div>
+    <div class="show02 number">
+        <div class="center">
+            <ul class="show-list clearfn">
+                <li>
+                    <h5>A+级HD高清屏</h5>
+                    <h6>画面清晰通透</h6>
+                </li>
+                <li>
+                    <h5>100%色域覆盖</h5>
+                    <h6>色彩艳丽丰富</h6>
+                </li>
+                <li>
+                    <h5>Mstar电视芯片</h5>
+                    <h6>系统流畅稳定</h6>
+                </li>
+                <li>
+                    <h5>1GB+8GB存储</h5>
+                    <h6>应用装的更多</h6>
+                </li>
+                <li>
+                    <h5>仅重3.8kg</h5>
+                    <h6>搬家不再费力</h6>
+                </li>
+                <li>
+                    <h5>新亲子模式</h5>
+                    <h6>宝宝安心观看</h6>
+                </li>
+                <li>
+                    <h5>全网海量资源</h5>
+                    <h6>每日不断更新</h6>
+                </li>
+                <li>
+                    <h5>真人工智能系统</h5>
+                    <h6>更聪明更好用</h6>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="show03 number">
+        <div class="center">
+            <p class="tit">屡获殊荣的Letv超级电视</p>
+            <p class="desc">Letv超级电视先后获得包括德国IFA设计与创新金奖在内的全球80余项大奖，得到了行业、媒体及用户广泛认可。<br>
+                截至2018年底，终端保有量过1200万台，覆盖超过4000万的用户。</p>
+        </div>
+    </div>
+    <div class="show04 number">
+        <div class="center">
+            <p class="tit">1平米就放得下</p>
+            <p class="tit-small">既省空间又好看</p>
+            <p class="desc">32吋的屏幕可以摆放在家中几乎任何地方，小客厅小卧室也能从容摆放。<br>
+                同时整机重量仅为3.8kg，搬家时也不会成为累赘。</p>
+            <p class="remark">*此图为创意展示，请勿模仿</p>
+        </div>
+    </div>
+    <div class="show05 number">
+        <div class="center">
+            <p class="tit">越用越聪明的人工智能EUI系统</p>
+            <p class="tit-small">不是所有电视都是真·AI</p>
+            <p class="desc">超级电视不仅能满足联网看在线视频的基础需求，还会不断进化学习，通过深层次的算法<br>
+                了解和感知全家人观看习惯，推荐更多精彩内容。</p>
+            <p class="other">清晰的内容分类<span>|</span>智能推荐算法<span>|</span>24小时轮播桌面<span>|</span>关屏听歌<span>|</span>定时关机</p>
+        </div> 
+    </div>
+    <div class="show06 number">
+        <div class="center">
+            <p class="tit">无线镜像投屏</p>
+            <p class="tit-small">手机画面也能分享到电视</p>
+            <p class="desc">当超级电视与移动设备处于同一局域网时，可以通过网络将存储的照片、视频<br>
+                甚至游戏全部推送在大屏上，带来更有趣的全新玩法。</p>
+            <p class="remark">*镜像投屏功能需通过AirPlay技术实现</p>
+        </div>
+    </div>
+    <div class="show07 number">
+        <div class="center">
+            <p class="tit">远程协助技术</p>
+            <p class="tit-small">再也不必担心家人不会用</p>
+            <p class="desc">无论身处公司或者异地，都可以通过手机远程遥控家中电视，<br>
+                帮助家人进行视频播放、APP安装、卸载、系统设置等操作。</p>
+            <p class="remark">*需手机下载HomeTime软件实现该功能</p>
+        </div>
+    </div>
+    <div class="show08 number">
+        <div class="center">
+            <p class="tit">全新一代亲子模式</p>
+            <p class="tit-small">保护孩子只能看到健康的内容</p>
+            <p class="desc">亲子模式能提供丰富的0-12岁儿童教育资源、优秀的动漫视频和双语内容。<br>
+                同时纯净的观影环境让孩子只能看到过滤后的健康内容。</p>
+        </div>
+    </div>
+    <div class="show09 number">
+        <div class="center">
+            <p class="tit">一键就可以看电视直播</p>
+            <p class="tit-small">操作轻松又简单</p>
+            <p class="desc">超级电视可以一键快速切换到信号源界面，轻松收看机顶盒直播内容。</p>
+            <p class="remark">*首次使用需要将主页键设置为信号源，且外置机顶盒需开通电视直播功能</p>
+        </div>
+    </div>
+    <div class="show10 number">
+        <div class="center">
+            <p class="tit">Mstar专业电视芯片 性能强劲</p>
+            <p class="tit-small">1GB运存 + 8GB闪存，大存储使用更畅快</p>
+        </div>
+    </div>
+    <div class="show11 number">
+        <div class="center">
+            <div class="box-right">
+                <p class="tit">接口丰富 一应俱全</p>
+                <p class="tit-small">接驳电视机顶盒、游戏主机、当做显示器都没问题 </p>
+                <ul class="list clearfn">
+                    <li>
+                        <h5>HDMI接口</h5>
+                        <h6>(支持ARC) x 1</h6>
+                    </li>
+                    <li>
+                        <h5>有线网口</h5>
+                        <h6>x 1</h6>
+                    </li>
+                    <li>
+                        <h5>RF接口</h5>
+                        <h6>x 1</h6>
+                    </li>
+                    <li>
+                        <h5>USB接口</h5>
+                        <h6>x 2</h6>
+                    </li>
+                    <li>
+                        <h5>耳机音频接口</h5>
+                        <h6>x 1</h6>
+                    </li>
+                    <li>
+                        <h5>AV输入接口</h5>
+                        <h6>x 1</h6>
+                    </li>
+                    <li>
+                        <h5>色差分量接口</h5>
+                        <h6>x 1</h6>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="show12 number">
+        <div class="center">
+            <p class="tit">乐融致新简介</p>
+            <p class="desc">乐融致新是互联网电视开拓者 “Letv超级电视” 的业务实体，是融创文化集团成员企业，<br>
+                以软硬件一体终端产品研发和运营为核心的互联网科技企业。<br><br>
+                未来，在融创文化的大家庭中，乐融将以运营美好家庭生活为目标，为中国家庭敬长、亲子、悦己的家庭关系<br>
+                提供优质的内容和服务，构建一个齐乐融融的家庭智能硬件与服务版图</p>
+        </div>
+    </div>
+</div>
+ <!-- serve 服务 -->
+ <div class="clearfn serve">
+    <section>
+       <ul>
+           <li><i class="iconfont">&#xe6d1;</i> 正品保障</li>
+           <li><a href=""><i class="iconfont">&#xe639;</i> 7天无理由退货</a></li>
+           <li><a href=""><i class="iconfont">&#xe603;</i> 物流服务</a></li>
+           <li><a href=""><i class="iconfont">&#xe674;</i> 售后服务网点</a></li>
+       </ul> 
+    </section>
+ </div>
+ <!-- footer 底部 -->
+<footer>
+    <section>
+        <div class="foot-ul">
+            <h4>选购及了解</h4>
+            <ul>
+               <li><a href="">超级电视</a> </li>
+               <li><a href="">屏霸</a> </li>
+               <li><a href="">生活家</a> </li> 
+            </ul>
+        </div>
+        <div class="foot-ul">
+            <h4>帮助中心</h4>
+            <ul>
+                <li><a href="">新手入门</a> </li>
+                <li><a href="">物流服务</a> </li>
+                <li><a href="">售后政策</a> </li>
+                <li><a href="">安装保修</a> </li>
+            </ul>
+        </div>
+        <div class="foot-ul">
+            <h4>服务支持</h4>
+            <ul>
+                <li><a href="">自助服务</a> </li>
+                <li><a href="">乐码通道</a> </li>
+                <li><a href="">商家电话</a> </li>
+            </ul>
+        </div>
+        <div class="foot-ul">
+            <h4>关于乐融商城</h4>
+            <ul>
+                <li><a href="">公司介绍</a> </li>
+                <li><a href="">联系我们</a> </li>
+                <li><a href="">加入我们</a> </li>
+                <li><a href="">关注我们</a> </li>
+            </ul>
+        </div>
+        <div class="foot-ul" id="foot-tele">
+                <span>1010-9000</span>
+                <div class="foot-a">
+                    <a href="">在线客服</a>
+                </div>
+                <i class="line">热线服务时间：9:00-18:00</i>
+                <em class="line">在线服务时间：9:00-22:00</em>
+                <strong class="hint">*生活家频道商品服务</strong>
+                <b class="hint">需联系详情页商家电话</b>   
+        </div>
+    </section>
+    <article>
+        <aside>
+            Copyright © 2004-2019 乐视商城 All rights reserved
+            <span> | </span>
+            京ICP备19019019号-1
+            <span>|</span>
+            <a href="#">营业执照信息</a>
+        </aside>
+    </article>
+</footer>
+<!-- float -->
+<div class="float">
+    <section>
+        <a href="http://localhost:8888/cart.html"><i class="iconfont">&#xe507;</i></a>
+       <b></b>
+        <div class="float-shop">
+            <i class="iconfont">&#xe506;</i>
+            <span>购物车</span>
+        </div>
+    </section>
+    <article>
+        <a href="" class="float-art-a"><i class="iconfont">&#xe622;</i></a>
+        <b></b>
+        <div class="float-link">
+            <i class="iconfont link-i">&#xe506;</i>
+            <div class="link-a">
+                <a href=""><i class="iconfont">&#xe62f;</i></a>
+                <a href=""><i class="iconfont">&#xe636;</i></a>
+                <a href=""><i class="iconfont">&#xe602;</i></a>
+                <a href=""><i class="iconfont">&#xe502;</i></a>
+            </div>
+            
+        </div>
+    </article>
+    <aside>
+        <a href=""><i class="iconfont">&#xe60b;</i></a>
+        <div class="float-show">
+            <i class="iconfont">&#xe506;</i>
+            <strong>在线客服</strong>
+        </div>
+    </aside>
+    <footer>
+        <a href="">
+            <i class="iconfont">&#xe91b;</i>
+        </a>
+    </footer>
+</div>
+    </body>
+</html>

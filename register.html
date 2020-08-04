@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <title>注册</title>
+    <script src="js/ajax.js"></script>
+    <script>
+        window.onload = function(){
+            var oBtn = document.getElementById("btn1");
+            var aInputs = document.getElementsByTagName("input");
+            var oAlert = document.getElementById("alert");
+            oBtn.onclick = function(){
+                $ajax({
+                    type: "post",
+                    url: "./php/register.php",
+                    data: {
+                        username: aInputs[0].value,
+                        password: aInputs[1].value,
+                        repassword: aInputs[2].value,
+                        addTime: (new Date()).getTime()
+                    },
+                    success: function(result){
+                        // alert(result);
+                        //json格式字符串
+                        var obj = JSON.parse(result);
+                        if(obj.code){
+                            oAlert.className = 'alert alert-danger';
+                            
+                        }else{
+                            oAlert.className = 'alert alert-success';
+                        }
+
+                        oAlert.style.display = "block";
+                        oAlert.innerHTML = obj.message;
+                    },
+                    error: function(msg){
+                        alert(msg);
+                    }
+                })
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div class="login_box clearfn">
+            <a id="logo_url">
+                <img class="regi_logo" src="//i1.letvimg.com/lc02_user/202001/07/10/29/157836414332854.png">
+            </a>
+            <ul class="logo_ul">
+                <li class="logo_li_rlist">
+                    <span class="txt" id="txt">语言：
+                        <a class="language">简体中文</a>
+                    </span>
+                    <div class="lag_box" style="display: none;">
+                        <i class="coun_arrows coun_arrows_top"></i>
+                        <ul>
+                            <li langid="zh-cn" class="on">简体中文</li>
+                            <li langid="zh-hk">繁體中文</li>
+                            <li langid="en-us">English</li>
+                            <li langid="ru-ru" class="lastchild">Русский</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="logo_li_rlist wire">|</li>
+               
+                <li class="logo_li_rlist">
+                    <span class="txt">国家/地区：
+                        <a class="area">中国</a>
+                    </span>
+                </li>
+                <li class="logo_li_rlist wire">|</li>
+                <li class="logo_li_rlist help">
+                    <a href="http://www.le.com/help/index.html">帮助</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- main -->
+    <main>
+        <div class="main_box">
+            <div class="main_login">
+                <div class="main_login_from">
+                    <p class="tit_p clearfn">
+                        <span class="tit_span_left">注册</span>
+                        <b class="tit_right">
+                            <a href="http://localhost/dist/login.html" id="iphone">立即登录</a>
+                        </b>
+                    </p>
+                    <p class="error_top">
+                        <span class="error" id="alert"></span>
+                    </p>
+                    <form action="" class="from_box">
+                                <!-- 正则练习 -->
+                       <ul class="Regi_ul">
+                           <li class="Regi_li Iph">
+                                <i class="iconfont">&#xe626;</i>
+                                <input type="text" id="loginname" name="username" class="login_Inp" placeholder="用户名" style="background-color: #fff;">
+                           </li>
+                           <li class="Regi_li">
+                               <i class="iconfont" style="font-size: 23px;">&#xe625;</i>
+                               <input type="password" placeholder="密码" name="password" id="login_Inp" class="login_Inp">
+                           </li>
+                           <li class="Regi_li">
+                            <i class="iconfont" style="font-size: 23px;">&#xe625;</i>
+                            <input type="password" placeholder="确认密码" name="repassword" id="login_Inp" class="login_Inp">
+                        </li>
+                       </ul> 
+
+                    </form>
+                    <aside class="Regi_gree">
+                        <label>
+                            <input type="checkbox" tabindex="4" name="xieyi" id="xieyi" checked="checked" value="true" >我已阅读并同意
+                            <a target="_blank" href="/protocol/registerprotocol">乐视用户协议</a>
+                        </label>
+                    </aside>
+                    <div class="from_btn">
+                        <a id="btn1" href="javascript:;" class="regi_btn">注&nbsp;&nbsp;&nbsp;&nbsp;册</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
